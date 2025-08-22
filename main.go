@@ -5,7 +5,6 @@ import (
 	"clean-code/database"
 	"clean-code/pkg/inventory"
 	"clean-code/pkg/itemshop"
-	"clean-code/pkg/player"
 	"clean-code/pkg/playercoin"
 	"clean-code/pkg/purchasehistory"
 	"log"
@@ -22,10 +21,10 @@ func main() {
 
 	r := gin.Default()
 
-	playerRepo := player.NewRepository(db)
-	playerService := player.NewService(playerRepo)
-	playerHandler := player.NewHandler(playerService)
-	playerHandler.RegisterRoutes(r)
+	// playerRepo := player.NewRepository(db)
+	// playerService := player.NewService(playerRepo)
+	// playerHandler := player.NewHandler(playerService)
+	// playerHandler.RegisterRoutes(r)
 
 	invRepo := inventory.NewRepository(db)
 	invService := inventory.NewService(invRepo)
